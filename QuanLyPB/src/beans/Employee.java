@@ -2,13 +2,15 @@ package beans;
 
 import java.time.LocalDate;
 
+import dao.ConnectDB;
+
 public class Employee {
 	int id;
 	String name;
 	String phone;
-	LocalDate DoB;
+	LocalDate doB;
 	String address;
-	int DepId;
+	int depId;
 	
 	public Employee() {
 	}
@@ -17,9 +19,9 @@ public class Employee {
 		this.id = id;
 		this.name = name;
 		this.phone = phone;
-		DoB = doB;
+		this.doB = doB;
 		this.address = address;
-		DepId = depId;
+		this.depId = depId;
 	}
 
 	public int getId() {
@@ -47,11 +49,11 @@ public class Employee {
 	}
 
 	public LocalDate getDoB() {
-		return DoB;
+		return doB;
 	}
 
 	public void setDoB(LocalDate doB) {
-		DoB = doB;
+		this.doB = doB;
 	}
 
 	public String getAddress() {
@@ -63,13 +65,16 @@ public class Employee {
 	}
 
 	public int getDepId() {
-		return DepId;
+		return depId;
 	}
 
 	public void setDepId(int depId) {
-		DepId = depId;
+		this.depId = depId;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return name+" "+ doB;
+	}
 	
 }
