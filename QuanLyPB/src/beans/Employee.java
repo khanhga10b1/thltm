@@ -10,6 +10,7 @@ public class Employee {
 	String phone;
 	LocalDate doB;
 	String address;
+	int c;
 	int depId;
 	
 	public Employee() {
