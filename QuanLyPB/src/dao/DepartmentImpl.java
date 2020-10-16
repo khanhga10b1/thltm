@@ -25,7 +25,7 @@ public class DepartmentImpl implements DepartmentDao {
 		List<Department> departments = new ArrayList<>();
 		try {
 			conn = ConnectDB.getConnection();
-			String sql ="select * from nhanvien";
+			String sql ="select * from phongban";
 			pst =conn.prepareStatement(sql);
 			rs =pst.executeQuery();
 			while(rs.next()) {
@@ -40,5 +40,6 @@ public class DepartmentImpl implements DepartmentDao {
 		
 		return departments;
 	}
+
 
 }
