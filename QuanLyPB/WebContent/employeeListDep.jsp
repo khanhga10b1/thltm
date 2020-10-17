@@ -36,7 +36,7 @@ List<Employee> employees =(List) request.getAttribute("employees");
                 <a href="updateEmployee?id=<%=e.getId()%>">Edit</a>
              </td>
              <td>
-                <a href="">Delete</a>
+                <a href="deleteEmployee?id=<%=e.getId()%>">Delete</a>
              </td>
           </tr>
           <%} %>

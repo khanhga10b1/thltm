@@ -123,4 +123,18 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		}
 		return employees;
 	}
+
+	@Override
+	public void deletaEmployee(int id) {
+		conn = ConnectDB.getConnection();
+		String sql = "delete from nhanvien where manv ="+id;
+		try {
+			pst = conn.prepareStatement(sql);
+			pst.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			ConnectDB.close(conn);
+		}
+	}
 }
