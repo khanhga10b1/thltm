@@ -10,8 +10,23 @@ public class DepartmentServiceImpl implements DepartmentService {
 	private DepartmentDao dao = new DepartmentImpl();
 	@Override
 	public List<Department> getAllDepartments() {
-		// TODO Auto-generated method stub
 		return dao.getAllDepartments();
+	}
+	@Override
+	public void addDepartment(Department department) {
+			dao.addDepartment(department);
+	}
+	@Override
+	public void deleteDepartment(int id) {
+		dao.deleteDepartment(id);
+	}
+	@Override
+	public Department getDepartment(int id) {
+		return dao.getDepartment(id);
+	}
+	@Override
+	public void updateDepartment(Department department) {
+		dao.updateDepartment(department);
 	}
 
 }

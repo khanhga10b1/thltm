@@ -13,10 +13,8 @@
 </head>
 <body>
 <h1>Trang chủ</h1>
-<a href="home">Home</a>
-   |
-   <a href="departmentList">Danh sách phòng ban</a>
-
-
+	<jsp:include page="header.jsp"></jsp:include>
+	<h2 align="center">Đây là trang chủ</h2>
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

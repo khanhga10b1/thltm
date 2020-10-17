@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 <% 
 List<Employee> employees =(List) request.getAttribute("employees");
  %>
@@ -36,11 +37,12 @@ List<Employee> employees =(List) request.getAttribute("employees");
                 <a href="updateEmployee?id=<%=e.getId()%>">Edit</a>
              </td>
              <td>
-                <a href="deleteEmployee?id=<%=e.getId()%>">Delete</a>
+                <a href="deleteEmployee?id=<%=e.getId()%>&depId=<%=e.getDepId() %>">Delete</a>
              </td>
           </tr>
           <%} %>
     </table>
-</body>
+    <a href="addEmployee?id=<%=request.getParameter("id")%>">Thêm nhân viên</a>
+    <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

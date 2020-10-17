@@ -9,7 +9,6 @@ public class ConnectDB {
 	private static String user="root";
 	private static String password = "123456";
 	private static Connection conn = null;
-	
 
 	public static  Connection getConnection() {
 		try {
@@ -26,8 +25,10 @@ public class ConnectDB {
 	public static void close(Connection conn) {
 		try {
 			conn.close();
+			System.out.println("đã đóng kết nối.");
 		} catch (SQLException e) {
 			e.printStackTrace();
+			System.out.println("đóng kết nối thất bại");
 		}
 	}
 }
