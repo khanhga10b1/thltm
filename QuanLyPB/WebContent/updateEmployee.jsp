@@ -10,6 +10,7 @@
 <body>
 <% Employee employee =(Employee) request.getAttribute("employee");%>
 <h1>edit</h1>
+<jsp:include page="header.jsp"></jsp:include>
 <form action="updateEmployee" method="post" >
 	<input type="hidden" name="id" value="<%=employee.getId() %>" >
 	<table>
@@ -39,9 +40,10 @@
 		</tr>
 		<tr>
 			<td><input type="submit" value="Xác nhận"></td>
-			<td><a href="home">Hủy</a>
+			<td><a href="employeeListDep?id=<%=employee.getDepId()%>">Hủy</a> </td>
+		</tr>
 	</table>
-
 </form>
+<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

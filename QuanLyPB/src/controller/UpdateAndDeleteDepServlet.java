@@ -10,26 +10,30 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import beans.Employee;
-import service.EmployeeService;
-import service.EmployeeServiceImpl;
+import beans.Department;
+import service.DepartmentService;
+import service.DepartmentServiceImpl;
 
-@WebServlet(urlPatterns = { "/home" })
-public class HomeServlet extends HttpServlet {
-
+@WebServlet(urlPatterns = { "/updateAndDeleteDep" })
+public class UpdateAndDeleteDepServlet extends HttpServlet {
+	DepartmentService service= new DepartmentServiceImpl();
 	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
+		List<Department> departments = service.getAllDepartments();
+		request.setAttribute("departments", departments);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("updateAndDeleteDep.jsp");
 		dispatcher.forward(request, response);
+		
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doGet(request, response);
+
 	}
+
 }

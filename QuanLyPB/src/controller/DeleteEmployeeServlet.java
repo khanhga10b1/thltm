@@ -20,19 +20,22 @@ public class DeleteEmployeeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		int id = 0;
+		int depId =0;
 		try {
 			id = Integer.parseInt(request.getParameter("id"));
+			depId = Integer.parseInt(request.getParameter("depId"));
 		} catch (Exception e) {
 			response.sendRedirect("home");
 			return;
 		}
-		service.deletaEmployee(id);
-		response.sendRedirect("home");
+		service.deleteEmployee(id);
+		response.sendRedirect("employeeListDep?id="+depId);
 	
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		doGet(request, response);
 	}
 }

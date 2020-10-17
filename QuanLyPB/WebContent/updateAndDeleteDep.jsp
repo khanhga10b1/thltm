@@ -15,13 +15,15 @@
        <tr>
           	 <td>ID</td>
              <td>Tên phòng ban </td>
-             <td>Xem danh sách</td>
+             <td>Xóa</td>
+             <td>Sửa</td>
        </tr>
        <%for(Department d:departments){ %>
        <tr>
           	 <td><%=d.getId() %></td>
            	 <td><%=d.getName() %></td>
-             <td><a href="employeeListDep?id=<%=d.getId()%>">Xem</a></td>
+             <td><a href="deleteDepartment?id=<%=d.getId()%>">Xóa</a></td>
+             <td><a href="updateDepartment?id=<%=d.getId()%>">Sửa</a></td>
        </tr>
        <%} %>
        </table>
