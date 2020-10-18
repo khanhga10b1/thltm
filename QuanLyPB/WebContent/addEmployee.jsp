@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Thêm nhân viên</title>
 </head>
 <body>
 <h1>ADD</h1>

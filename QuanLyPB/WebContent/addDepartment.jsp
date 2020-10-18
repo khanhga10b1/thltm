@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Thêm phòng ban</title>
 </head>
 <body>
 <h1>ADD</h1>

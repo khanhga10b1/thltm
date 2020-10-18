@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Sửa nhân viên</title>
+<title>Cập nhật nhân viên</title>
 </head>
 <body>
 <% Employee employee =(Employee) request.getAttribute("employee");%>
