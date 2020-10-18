@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Cập nhật phòng ban</title>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
@@ -20,7 +20,7 @@
 		<tr>
 		<tr>
 			<td>Tên phòng ban: </td>
-			<td><input type="text" name="name" value="<%=department.getName() %>"  ></td>
+			<td><input type="text" name="name" value="<%=department.getName() %>" required="required" ></td>
 		</tr>
 		<tr>
 		<tr>

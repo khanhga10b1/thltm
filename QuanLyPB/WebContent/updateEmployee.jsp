@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Sửa nhân viên</title>
+<title>Cập nhật nhân viên</title>
 </head>
 <body>
 <% Employee employee =(Employee) request.getAttribute("employee");%>
@@ -20,23 +20,23 @@
 		</tr>
 		<tr>
 			<td>Tên: </td>
-			<td><input type="text" name="name" value="<%=employee.getName() %>"  ></td>
+			<td><input type="text" name="name" value="<%=employee.getName() %>" required="required" ></td>
 		</tr>
 		<tr>
 			<td>SĐT: </td>
-			<td><input type="text" name="phone" value="<%=employee.getPhone() %>"  ></td>
+			<td><input type="text" name="phone" value="<%=employee.getPhone() %>" required="required" ></td>
 		</tr>
 		<tr>
 			<td>Ngày sinh: </td>
-			<td><input type="date" name="doB" value="<%=employee.getDoB() %>"  ></td>
+			<td><input type="date" name="doB" value="<%=employee.getDoB() %>" required="required" ></td>
 		</tr>
 		<tr>
 			<td>Địa chỉ: </td>
-			<td><input type="text" name="address" value="<%=employee.getAddress() %>"  ></td>
+			<td><input type="text" name="address" value="<%=employee.getAddress() %>" required="required"  ></td>
 		</tr>
 		<tr>
 			<td>Mã phòng ban: </td>
-			<td><input type="text" name="depId" value="<%=employee.getDepId() %>"  ></td>
+			<td><input type="text" name="depId" value="<%=employee.getDepId() %>" required="required"  ></td>
 		</tr>
 		<tr>
 			<td><input type="submit" value="Xác nhận"></td>
