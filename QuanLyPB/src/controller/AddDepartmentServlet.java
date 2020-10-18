@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,6 +22,8 @@ public class AddDepartmentServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+			List<Department> departments = service.getAllDepartments();
+			request.setAttribute("departments", departments);
 			RequestDispatcher dispatcher =request.getRequestDispatcher("addDepartment.jsp");
 			dispatcher.forward(request, response);
 	}

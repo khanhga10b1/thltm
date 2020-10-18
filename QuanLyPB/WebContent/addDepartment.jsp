@@ -1,3 +1,5 @@
+<%@page import="beans.Department"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -25,6 +27,10 @@
 		</tr>
 	</table>
 </form>
+<%List<Department> departments =(List) request.getAttribute("departments"); %>
+<div style="color: #FF0000;">
+Các id đã dùng:<%for(Department d:departments){ %><%=d.getId()+" " %><%} %>
+</div>
 <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -22,6 +23,8 @@ public class AddEmployeeServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		List<Employee> employees = service.getAllEmployees();
+		request.setAttribute("employees",employees);
 		RequestDispatcher dispatcher =request.getRequestDispatcher("addEmployee.jsp");
 		dispatcher.forward(request, response);
 	}
