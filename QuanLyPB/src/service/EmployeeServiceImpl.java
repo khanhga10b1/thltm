@@ -32,5 +32,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public void addEmployee(Employee employee) {
 		dao.addEmployee(employee);
 	}
+	@Override
+	public List<Employee> searchEmployee(String name) {
+		return dao.searchEmployee(name);
+	}
 	
 }

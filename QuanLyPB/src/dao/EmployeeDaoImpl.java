@@ -158,4 +158,29 @@ public class EmployeeDaoImpl implements EmployeeDao {
 			ConnectDB.close(conn);
 		}
 	}
+
+	@Override
+	public List<Employee> searchEmployee(String name) {
+		List<Employee> employees = new ArrayList<>();
+		conn= ConnectDB.getConnection();
+		String sql ="select * from nhanvien where tennv like '%"+name+"%'";
+		try {
+			pst = conn.prepareStatement(sql);
+			rs =pst.executeQuery();
+			while(rs.next()) {
+				int id = rs.getInt(1);
+				String nameem = rs.getString(2);
+				String phone = rs.getString(3);
+				LocalDate doB = LocalDate.parse(rs.getString(4));
+				String address = rs.getString(5);
+				int depId = rs.getInt(6);
+				employees.add(new Employee(id, nameem, phone, doB, address, depId));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			ConnectDB.close(conn);
+		}
+		return employees;
+	}
 }

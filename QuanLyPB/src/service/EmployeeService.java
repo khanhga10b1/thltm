@@ -11,4 +11,5 @@ public interface EmployeeService {
 	List<Employee> getEmployeeList(int id);
 	void deleteEmployee(int id);
 	void addEmployee(Employee employee);
+	List<Employee> searchEmployee(String name);
 }
