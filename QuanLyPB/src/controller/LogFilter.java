@@ -26,8 +26,8 @@ public class LogFilter implements Filter {
 		HttpServletRequest request2 = (HttpServletRequest) request;
 		HttpSession session = request2.getSession();
 		Admin admin = (Admin) session.getAttribute("admin");
-		HttpServletResponse resp = (HttpServletResponse) response;
 		if(admin==null) {
+			
 			RequestDispatcher dispatcher = request.getRequestDispatcher("login");
 			dispatcher.forward(request, response);
 		}else {
