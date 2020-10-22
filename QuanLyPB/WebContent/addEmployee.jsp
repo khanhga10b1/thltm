@@ -9,7 +9,6 @@
 <title>Thêm nhân viên</title>
 </head>
 <body>
-<h1>ADD</h1>
 <jsp:include page="header.jsp"></jsp:include>
 <form action="addEmployee" method="post" name="addform" onsubmit="return checkform()">
 	<input type="hidden" name="depId" value="<%=request.getParameter("id")%>">
@@ -39,7 +38,7 @@
 			<td><%=request.getParameter("id") %></td>
 		</tr>
 		<tr>
-			<td><input type="submit" value="Xác nhận"></td>
+			<td><input class="submit" type="submit" value="Xác nhận"></td>
 			<td><a href="employeeListDep?id=<%=request.getParameter("id")%>">Hủy</a> </td>
 		</tr>
 	</table>

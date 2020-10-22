@@ -24,7 +24,7 @@
 		</tr>
 		<tr>
 		<tr>
-			<td><input type="submit" value="Xác nhận"></td>
+			<td><input class="submit" type="submit" value="Xác nhận"></td>
 			<td><a href="updateAndDeleteDep">Hủy</a> </td>
 		</tr>
 		<tr>

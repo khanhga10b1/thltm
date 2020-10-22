@@ -12,7 +12,6 @@
 <title>Trang chủ</title>
 </head>
 <body>
-<h1>Trang chủ</h1>
 	<jsp:include page="header.jsp"></jsp:include>
 	<h2 align="center">Đây là trang chủ</h2>
 	<jsp:include page="footer.jsp"></jsp:include>

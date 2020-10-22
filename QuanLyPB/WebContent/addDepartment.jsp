@@ -9,7 +9,6 @@
 <title>Thêm phòng ban</title>
 </head>
 <body>
-<h1>ADD</h1>
 <jsp:include page="header.jsp"></jsp:include>
 <form action="addDepartment" method="post" name="addform" onsubmit="return checkform()">
 	<table>
@@ -22,7 +21,7 @@
 			<td><input type="text" name="name" required="required"></td>
 		</tr>
 		<tr>
-			<td><input type="submit" value="Xác nhận"></td>
+			<td><input class="submit" type="submit" value="Xác nhận"></td>
 			<td><a href="home">Hủy</a> </td>
 		</tr>
 	</table>

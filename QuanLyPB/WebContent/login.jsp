@@ -7,8 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	
+	<form action="login" method="post" style="margin: 100px auto; width: 300px;">
 	<h1>Đăng nhập</h1>
-	<form action="login" method="post">
 	<table>
 		<tr>
 			<td>Tài khoản: </td>

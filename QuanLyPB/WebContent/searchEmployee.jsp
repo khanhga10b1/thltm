@@ -6,13 +6,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Tìm kiếm nhân viên</title>
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 	<form action="searchEmployee" method="post">
 		<input type="text" name="name" <%if(request.getParameter("name")!=null) {%> value="<%=request.getParameter("name")%>"<%} %> >
-		<input type="submit" value="tìm kiếm">
+		<input class="submit" type="submit" value="tìm kiếm">
 	</form>
 
 <% 

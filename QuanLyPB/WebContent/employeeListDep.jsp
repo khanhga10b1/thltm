@@ -3,12 +3,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html >
 <head>
 <meta charset="UTF-8">
 <title>Danh sách nhân viên</title>
 </head>
-<body>
+<body >
 <jsp:include page="header.jsp"></jsp:include>
 <% 
 List<Employee> employees =(List) request.getAttribute("employees");
@@ -42,7 +42,7 @@ List<Employee> employees =(List) request.getAttribute("employees");
           </tr>
           <%} %>
     </table>
-    <a href="addEmployee?id=<%=request.getParameter("id")%>">Thêm nhân viên</a>
+    <a class="addEmployee" href="addEmployee?id=<%=request.getParameter("id")%>">Thêm nhân viên</a>
     <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

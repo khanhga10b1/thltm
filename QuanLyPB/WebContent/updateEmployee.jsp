@@ -39,7 +39,7 @@
 			<td><input type="text" name="depId" value="<%=employee.getDepId() %>" required="required"  ></td>
 		</tr>
 		<tr>
-			<td><input type="submit" value="Xác nhận"></td>
+			<td><input class="submit" type="submit" value="Xác nhận"></td>
 			<td><a href="employeeListDep?id=<%=employee.getDepId()%>">Hủy</a> </td>
 		</tr>
 	</table>
