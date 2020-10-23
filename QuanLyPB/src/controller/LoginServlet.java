@@ -40,8 +40,9 @@ public class LoginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("admin", admin);
 			
-			String url = (String) request.getAttribute("url");
+			String url = (String) session.getAttribute("url");
 			System.out.println(url);
+			
 			if(url==null) {
 				response.sendRedirect("home");
 			}else {
