@@ -13,7 +13,7 @@ public class ConnectDB {
 	public static  Connection getConnection() {
 		try {
 			
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(url, user, password);
 			System.out.println("kết nối thành công");
 		} catch (Exception e) {
