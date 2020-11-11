@@ -13,14 +13,16 @@ import javax.servlet.http.HttpServletResponse;
 import beans.Department;
 import service.DepartmentService;
 import service.DepartmentServiceImpl;
-import service.EmployeeService;
-import service.EmployeeServiceImpl;
 
 @WebServlet(urlPatterns = { "/departmentList" })
 public class DepartmentListServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	DepartmentService service= new DepartmentServiceImpl();
+	private DepartmentService service;
+	
+	public DepartmentListServlet() {
+		service= new DepartmentServiceImpl();
+	}
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)

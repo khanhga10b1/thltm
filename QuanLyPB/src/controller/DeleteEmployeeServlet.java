@@ -8,12 +8,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import beans.Employee;
 import service.EmployeeService;
 import service.EmployeeServiceImpl;
 @WebServlet(urlPatterns = {"/deleteEmployee"})
 public class DeleteEmployeeServlet extends HttpServlet {
-	EmployeeService service = new EmployeeServiceImpl();
+	private EmployeeService service = new EmployeeServiceImpl();
+	
+	public DeleteEmployeeServlet() {
+		service = new EmployeeServiceImpl();
+	}
+	
 	private static final long serialVersionUID = 1L;
 
 	@Override

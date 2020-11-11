@@ -16,8 +16,12 @@ import service.EmployeeServiceImpl;
 
 @WebServlet(urlPatterns = { "/searchEmployee" })
 public class SearchEmployeeServlet extends HttpServlet {
-	EmployeeService service = new EmployeeServiceImpl();
+	private EmployeeService service;
 	private static final long serialVersionUID = 1L;
+	
+	public SearchEmployeeServlet() {
+		service = new EmployeeServiceImpl();
+	}
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)

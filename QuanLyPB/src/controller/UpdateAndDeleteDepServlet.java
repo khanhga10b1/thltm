@@ -16,7 +16,12 @@ import service.DepartmentServiceImpl;
 
 @WebServlet(urlPatterns = { "/updateAndDeleteDep" })
 public class UpdateAndDeleteDepServlet extends HttpServlet {
-	DepartmentService service= new DepartmentServiceImpl();
+	private DepartmentService service;
+	
+	public UpdateAndDeleteDepServlet() {
+		service= new DepartmentServiceImpl();
+	}
+	
 	private static final long serialVersionUID = 1L;
 
 	@Override

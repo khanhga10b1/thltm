@@ -16,7 +16,12 @@ import service.AdminServiceImpl;
 
 @WebServlet(urlPatterns = { "/login" })
 public class LoginServlet extends HttpServlet {
-	AdminService service = new AdminServiceImpl();
+	private AdminService service;
+	
+	public LoginServlet() {
+		service = new AdminServiceImpl();
+	}
+	
 	private static final long serialVersionUID = 1L;
 
 	@Override

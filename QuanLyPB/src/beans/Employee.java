@@ -2,8 +2,6 @@ package beans;
 
 import java.time.LocalDate;
 
-import dao.ConnectDB;
-
 public class Employee {
 	int id;
 	String name;

@@ -7,7 +7,10 @@ import dao.EmployeeDao;
 import dao.EmployeeDaoImpl;
 
 public class EmployeeServiceImpl implements EmployeeService {
-	private EmployeeDao dao = new EmployeeDaoImpl(); 
+	private final EmployeeDao dao;
+	public EmployeeServiceImpl() {
+		dao = new EmployeeDaoImpl(); 
+	}
 	@Override
 	public List<Employee> getAllEmployees() {
 		return dao.getAllEmployees();

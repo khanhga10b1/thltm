@@ -16,7 +16,10 @@ import service.DepartmentServiceImpl;
 
 @WebServlet(urlPatterns = { "/addDepartment" })
 public class AddDepartmentServlet extends HttpServlet {
-	DepartmentService service = new DepartmentServiceImpl();
+	private DepartmentService service;
+	public AddDepartmentServlet() {
+		service = new DepartmentServiceImpl();
+	}
 	private static final long serialVersionUID = 1L;
 
 	@Override

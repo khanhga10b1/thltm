@@ -4,7 +4,6 @@ public class Admin {
 	int id;
 	String userName;
 	String password;
-
 	public Admin() {
 	}
 

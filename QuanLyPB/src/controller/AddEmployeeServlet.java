@@ -17,7 +17,10 @@ import service.EmployeeServiceImpl;
 
 @WebServlet(urlPatterns = { "/addEmployee" })
 public class AddEmployeeServlet extends HttpServlet {
-	EmployeeService service = new EmployeeServiceImpl();
+	private EmployeeService service;
+	public AddEmployeeServlet() {
+		service = new EmployeeServiceImpl();
+	}
 	private static final long serialVersionUID = 1L;
 
 	@Override

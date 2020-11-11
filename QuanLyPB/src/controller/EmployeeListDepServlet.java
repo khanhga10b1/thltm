@@ -18,7 +18,11 @@ public class EmployeeListDepServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
-	EmployeeService service = new EmployeeServiceImpl();
+	private EmployeeService service;
+	
+	public EmployeeListDepServlet() {
+		service = new EmployeeServiceImpl();
+	}
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)

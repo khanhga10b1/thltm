@@ -13,7 +13,12 @@ import service.DepartmentServiceImpl;
 
 @WebServlet(urlPatterns = { "/deleteDepartment" })
 public class DeleteDepartmentServlet extends HttpServlet {
-	DepartmentService service = new DepartmentServiceImpl();
+	private DepartmentService service ;
+	
+	public DeleteDepartmentServlet() {
+		service = new DepartmentServiceImpl();
+	}
+	
 	private static final long serialVersionUID = 1L;
 
 	@Override

@@ -2,7 +2,6 @@ package controller;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,7 +16,12 @@ import service.EmployeeServiceImpl;
 
 @WebServlet(urlPatterns = { "/updateEmployee" })
 public class UpdateEmployeeServlet extends HttpServlet {
-	EmployeeService service = new EmployeeServiceImpl();
+	private EmployeeService service;
+	
+	public UpdateEmployeeServlet() {
+		service = new EmployeeServiceImpl();
+	}
+	
 	private static final long serialVersionUID = 1L;
 
 	@Override

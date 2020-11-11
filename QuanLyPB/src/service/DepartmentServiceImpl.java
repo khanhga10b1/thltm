@@ -7,7 +7,11 @@ import dao.DepartmentDao;
 import dao.DepartmentImpl;
 
 public class DepartmentServiceImpl implements DepartmentService {
-	private DepartmentDao dao = new DepartmentImpl();
+	private final DepartmentDao dao;
+	public DepartmentServiceImpl() {
+		dao= new DepartmentImpl();
+	}
+	
 	@Override
 	public List<Department> getAllDepartments() {
 		return dao.getAllDepartments();
