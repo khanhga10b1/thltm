@@ -16,7 +16,7 @@ import service.AdminServiceImpl;
 
 @WebServlet(urlPatterns = { "/login" })
 public class LoginServlet extends HttpServlet {
-	private AdminService service;
+	private final AdminService service;
 	
 	public LoginServlet() {
 		service = new AdminServiceImpl();

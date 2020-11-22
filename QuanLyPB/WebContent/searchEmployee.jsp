@@ -11,7 +11,7 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 	<form action="searchEmployee" method="post">
-		<input type="text" name="name" <%if(request.getParameter("name")!=null) {%> value="<%=request.getParameter("name")%>"<%} %> >
+		<input type="text" name="name" required="required" <%if(request.getParameter("name")!=null) {%> value="<%=request.getParameter("name")%>"<%} %> >
 		<input class="submit" type="submit" value="tìm kiếm">
 	</form>
 

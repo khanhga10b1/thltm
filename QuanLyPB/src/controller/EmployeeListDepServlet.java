@@ -18,7 +18,7 @@ public class EmployeeListDepServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private EmployeeService service;
+	private final EmployeeService service;
 	
 	public EmployeeListDepServlet() {
 		service = new EmployeeServiceImpl();

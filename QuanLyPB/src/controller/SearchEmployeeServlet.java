@@ -16,7 +16,7 @@ import service.EmployeeServiceImpl;
 
 @WebServlet(urlPatterns = { "/searchEmployee" })
 public class SearchEmployeeServlet extends HttpServlet {
-	private EmployeeService service;
+	private final EmployeeService service;
 	private static final long serialVersionUID = 1L;
 	
 	public SearchEmployeeServlet() {

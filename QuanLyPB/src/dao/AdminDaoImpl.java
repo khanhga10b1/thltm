@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import beans.Admin;
+import utils.ConnectDB;
+import utils.SqlUltils;
 
 public class AdminDaoImpl implements AdminDao {
 	private Connection conn = null;
@@ -35,7 +37,7 @@ public class AdminDaoImpl implements AdminDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			ConnectDB.close(conn);
+			SqlUltils.close(rs,pst,conn);
 		}
 
 		return admin;

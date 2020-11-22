@@ -12,7 +12,7 @@ import service.EmployeeService;
 import service.EmployeeServiceImpl;
 @WebServlet(urlPatterns = {"/deleteEmployee"})
 public class DeleteEmployeeServlet extends HttpServlet {
-	private EmployeeService service = new EmployeeServiceImpl();
+	private final EmployeeService service;
 	
 	public DeleteEmployeeServlet() {
 		service = new EmployeeServiceImpl();

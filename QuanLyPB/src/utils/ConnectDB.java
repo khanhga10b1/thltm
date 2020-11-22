@@ -1,4 +1,4 @@
-package dao;
+package utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -21,14 +21,5 @@ public class ConnectDB {
 			e.printStackTrace();
 		}
 		return conn;
-	}
-	public static void close(Connection conn) {
-		try {
-			conn.close();
-			System.out.println("đã đóng kết nối.");
-		} catch (SQLException e) {
-			e.printStackTrace();
-			System.out.println("đóng kết nối thất bại");
-		}
 	}
 }

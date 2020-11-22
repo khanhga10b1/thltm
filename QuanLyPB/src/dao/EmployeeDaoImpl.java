@@ -9,6 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import beans.Employee;
+import utils.ConnectDB;
+import utils.SqlUltils;
+import utils.ConnectDB;
 
 public class EmployeeDaoImpl implements EmployeeDao {
 	private Connection conn = null;
@@ -17,11 +20,6 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 	@Override
 	public List<Employee> getAllEmployees() {
-
-		return mockData();
-	}
-
-	private List<Employee> mockData() {
 		List<Employee> employees = new ArrayList<>();
 		try {
 			conn = ConnectDB.getConnection();
@@ -41,7 +39,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			ConnectDB.close(conn);
+			SqlUltils.close(rs,pst,conn);
 		}
 
 		return employees;
@@ -69,7 +67,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
-			ConnectDB.close(conn);
+			SqlUltils.close(rs,pst,conn);
 		}
 		return employee;
 	}
@@ -89,7 +87,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
-			ConnectDB.close(conn);
+			SqlUltils.close(pst,conn);
 		}
 		
 	}
@@ -119,7 +117,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
-			ConnectDB.close(conn);
+			SqlUltils.close(rs,pst,conn);
 		}
 		return employees;
 	}
@@ -134,7 +132,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
-			ConnectDB.close(conn);
+			SqlUltils.close(pst,conn);
 		}
 	}
 
@@ -155,7 +153,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
-			ConnectDB.close(conn);
+			SqlUltils.close(pst,conn);
 		}
 	}
 
@@ -179,7 +177,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
-			ConnectDB.close(conn);
+			SqlUltils.close(rs,pst,conn);
 		}
 		return employees;
 	}

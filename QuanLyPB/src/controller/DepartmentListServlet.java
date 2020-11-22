@@ -18,7 +18,7 @@ import service.DepartmentServiceImpl;
 public class DepartmentListServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	private DepartmentService service;
+	private final DepartmentService service;
 	
 	public DepartmentListServlet() {
 		service= new DepartmentServiceImpl();

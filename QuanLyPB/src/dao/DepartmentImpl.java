@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import beans.Department;
+import utils.ConnectDB;
+import utils.SqlUltils;
 
 public class DepartmentImpl implements DepartmentDao {
 	private Connection conn = null;
@@ -32,7 +34,7 @@ public class DepartmentImpl implements DepartmentDao {
 				departments.add(new Department(id, name));
 
 			}
-			ConnectDB.close(conn);
+			SqlUltils.close(rs,pst,conn);
 		} catch (SQLException e) {
 		}
 
@@ -50,7 +52,7 @@ public class DepartmentImpl implements DepartmentDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			ConnectDB.close(conn);
+			SqlUltils.close(pst,conn);
 		}
 	}
 
@@ -64,7 +66,7 @@ public class DepartmentImpl implements DepartmentDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
-			ConnectDB.close(conn);
+			SqlUltils.close(pst,conn);
 		}
 		
 	}
@@ -79,7 +81,7 @@ public class DepartmentImpl implements DepartmentDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
-			ConnectDB.close(conn);
+			SqlUltils.close(pst,conn);
 		}
 		
 	}
@@ -100,7 +102,7 @@ public class DepartmentImpl implements DepartmentDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
-			ConnectDB.close(conn);
+			SqlUltils.close(rs,pst,conn);
 		}
 		return department;
 	}

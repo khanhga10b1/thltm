@@ -13,7 +13,7 @@ import service.DepartmentServiceImpl;
 
 @WebServlet(urlPatterns = { "/deleteDepartment" })
 public class DeleteDepartmentServlet extends HttpServlet {
-	private DepartmentService service ;
+	private final DepartmentService service ;
 	
 	public DeleteDepartmentServlet() {
 		service = new DepartmentServiceImpl();

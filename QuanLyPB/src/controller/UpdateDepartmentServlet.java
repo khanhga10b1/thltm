@@ -15,7 +15,7 @@ import service.DepartmentServiceImpl;
 
 @WebServlet(urlPatterns = {"/updateDepartment"})
 public class UpdateDepartmentServlet extends HttpServlet {
-	private DepartmentService service;
+	private final DepartmentService service;
 	
 	public UpdateDepartmentServlet() {
 		service =new DepartmentServiceImpl();

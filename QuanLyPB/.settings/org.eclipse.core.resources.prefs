@@ -2,6 +2,6 @@ eclipse.preferences.version=1
 encoding//WebContent/updateAndDeleteDep.jsp=UTF-8
 encoding//WebContent/updateDepartment.jsp=UTF-8
 encoding//src/controller/UpdateEmployeeServlet.java=UTF-8
-encoding//src/dao/ConnectDB.java=UTF-8
 encoding//src/dao/EmployeeDaoImpl.java=UTF-8
+encoding//src/utils/ConnectDB.java=UTF-8
 encoding/<project>=UTF-8
